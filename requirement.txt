@@ -1,0 +1,8 @@
+#mettre les imports à installer 
+requests
+Flask
+virtualenv
+
+
+
+
