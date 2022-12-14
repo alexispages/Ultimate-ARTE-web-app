@@ -52,7 +52,7 @@ RTFM section
 
 ## Acknowledgments
 - [README Template](https://github.com/YousefIbrahimismail/Project-README-Template)
-- [Pipenv](https://pipenv.pypa.io/en/latest/)
+- [Flask](https://flask.palletsprojects.com/en/2.2.x/)
 
 ## Contact
 - [Anatole WILKE - LinkedIN](https://www.linkedin.com/in/anatole-wilke-0819051a8/) 
