@@ -1,6 +1,6 @@
 <!-- Logo Section  -->
 <div align="center">
-    <a href="https://www.arte.tv/fr/" target="_blank">
+    <a href="https://www.arte.tv/fr/direct/" target="_blank">
         <img src="https://i.imgur.com/Op6SYiw.png" 
         alt="Logo Arte Ultra" height="300" width="auto">
     </a>
