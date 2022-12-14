@@ -58,7 +58,7 @@ RTFM section
 - [Alexis PAGÈS - LinkedIN](https://www.linkedin.com/in/alexis-pag%C3%A8s-3663551a9/)
 
 ## License
-- [MIT License](./LICENSE.txt)
+- [MIT License](./LICENSE)
 
 <!-- back to top button -->
 <p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
