@@ -23,7 +23,7 @@ git clone https://github.com/alexispages/Ultimate-ARTE-web-app.git
 - Make sure you have [Docker installed on your system](https://docs.docker.com/get-docker/)
 - Build then run the container locally
 ```bash
-docker build -t plage/uawa:1.0 .
+docker build -t plag3/uawa:latest .
 docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:latest
 ```
 - Access the API content on http://localhost:5000/arte
