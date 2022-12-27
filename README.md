@@ -32,7 +32,7 @@ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:latest
 - A beautifull GIF
 
 <!-- back to top button -->
-<p align="right"><a href="#about">back to top ⬆️</a></p>
+<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
 
 ## Documentation
 RTFM section
@@ -50,4 +50,4 @@ RTFM section
 - [MIT License](./LICENSE)
 
 <!-- back to top button -->
-<p align="right"><a href="#about">back to top ⬆️</a></p>
+<p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
