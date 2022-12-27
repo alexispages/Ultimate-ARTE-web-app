@@ -15,30 +15,21 @@
 ## About
 A Python web app to retrieve the list of programs from the best channel in the world and filter them by category.
 
-## How to use this project
-- Work in progess...
+## Getting started
+- Clone this repository into your local machine
+```bash
+git clone https://github.com/alexispages/Ultimate-ARTE-web-app.git
+```
+- Make sure you have [Docker installed on your system](https://docs.docker.com/get-docker/)
+- Build then run the container locally
+```bash
+docker build -t plage/uawa:1.0 .
+docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:latest
+```
+- Access the API content on http://localhost:5000/arte
 
 ## Demo
 - A beautifull GIF
-
-## Table of Contents
-
-<dev align="center">
-<table align="center">
-        <tr>
-            <td><a href="#about">About</a></td>        
-            <td><a href="#how-to-use-this-project">Getting started</td>
-            <td><a href="#demo">Demo</a></td>
-            <td><a href="#documentation">Documentation</a></td>
-        </tr>
-        <tr>
-            <td><a href="#contributors">Contributors</a></td>
-            <td><a href="#acknowledgments">Acknowledgments</a></td>
-            <td><a href="#contact">Contact</a></td>
-            <td><a href="#license">License</a></td>
-        </tr>
-</table>
-</dev>
 
 <!-- back to top button -->
 <p align="right"><a href="#how-to-use-this-project">back to top ⬆️</a></p>
@@ -47,16 +38,13 @@ A Python web app to retrieve the list of programs from the best channel in the w
 RTFM section
 
 ## Contributors
-- Anatole WILKE
-- Alexis PAGÈS
+- [Anatole WILKE](https://www.linkedin.com/in/anatole-wilke-0819051a8/) 
+- [Alexis PAGÈS](https://www.linkedin.com/in/alexis-pag%C3%A8s-3663551a9/)
 
 ## Acknowledgments
 - [README Template](https://github.com/YousefIbrahimismail/Project-README-Template)
 - [Flask](https://flask.palletsprojects.com/en/2.2.x/)
-
-## Contact
-- [Anatole WILKE - LinkedIN](https://www.linkedin.com/in/anatole-wilke-0819051a8/) 
-- [Alexis PAGÈS - LinkedIN](https://www.linkedin.com/in/alexis-pag%C3%A8s-3663551a9/)
+- [Docker](https://docs.docker.com/language/python/build-images/)
 
 ## License
 - [MIT License](./LICENSE)
