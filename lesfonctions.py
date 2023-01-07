@@ -23,3 +23,16 @@ def parse_programme_du_jour(collect_result):
     except Exception as error:
         print(error)
     return parselist
+
+def generate_table(data):
+    table = "<table>"
+    for d in data:
+        table += "<tr>"
+        for key, value in d.items():
+            if key == "image":
+                table += "<td><img src={}></td>".format(value)
+            else:
+                table += "<td>{}</td>".format(value)
+        table += "</tr>"
+    table += "</table>"
+    return table

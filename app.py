@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, render_template
 import lesfonctions
 name="main"
 app = Flask(name)
@@ -10,7 +10,8 @@ def get_arte_programme_du_jour():
         url = 'https://api.arte.tv/api/player/v2/playlist/fr/LIVE?'
         response=lesfonctions.collect(url)
         parse_result=lesfonctions.parse_programme_du_jour(response)
-        return parse_result
+        table=lesfonctions.generate_table(parse_result)
+        return render_template("programmedujour.html", table=table)
 
     except Exception as error:
         print(error)
