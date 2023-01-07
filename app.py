@@ -9,8 +9,8 @@ def get_arte_programme_du_jour():
     try:
         url = 'https://api.arte.tv/api/player/v2/playlist/fr/LIVE?'
         response=lesfonctions.collect(url)
-
-        return response
+        parse_result=lesfonctions.parse_programme_du_jour(response)
+        return parse_result
 
     except Exception as error:
         print(error)
