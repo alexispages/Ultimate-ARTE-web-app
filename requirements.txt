@@ -2,10 +2,7 @@
 requests
 Flask
 virtualenv
-jsonpath_rw_ext
-wtforms
-Flask-WTF
-bs4
+
 
 
 
