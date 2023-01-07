@@ -10,7 +10,7 @@ class AppTestCase(unittest.TestCase):
         app.testing = True
 
     def test_home_status_code(self):
-        result = self.app.get('http://127.0.0.1:5000/')
+        result = self.app.get('http://127.0.0.1:5000/arte')
         self.assertEqual(result.status_code, 200)
 
     def test_table_exists(self):
