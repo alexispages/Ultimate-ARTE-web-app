@@ -4,8 +4,8 @@ import lesfonctions
 import re
 
 
-name="main"
-app = Flask(name)
+
+app = Flask(__name__)
 partage_data=""
 
 @app.route('/arte', methods=['GET', 'POST'])
@@ -47,5 +47,5 @@ def get_arte_categories():
     except Exception as error:
         print(error)
 
-if name == 'main':
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
