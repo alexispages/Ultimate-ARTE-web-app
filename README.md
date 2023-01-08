@@ -16,7 +16,7 @@
     <a href="https://github.com/alexispages/Ultimate-ARTE-web-app/blob/main/LICENSE"><img alt="Project License" src="https://img.shields.io/github/license/alexispages/Ultimate-ARTE-web-app?color=blue&style=for-the-badge"></a>
     <a href="https://github.com/alexispages/Ultimate-ARTE-web-app/actions/workflows/python-unittest.yml"><img alt="Unit tests status" src="https://img.shields.io/github/actions/workflow/status/alexispages/Ultimate-ARTE-web-app/python-unittest.yml?label=unit%20tests&logo=python&style=for-the-badge"></a>
     <a href="https://github.com/alexispages/Ultimate-ARTE-web-app/actions/workflows/docker-features.yml"><img alt="Docker Build Status" src="https://img.shields.io/github/actions/workflow/status/alexispages/Ultimate-ARTE-web-app/docker-features.yml?logo=docker&style=for-the-badge"></a>
-    <a href="https://github.com/alexispages/Ultimate-ARTE-web-app/releases"><img alt="Latest Release Version" src="https://img.shields.io/github/v/release/alexispages/Ultimate-ARTE-web-app?color=yellow&display_name=tag&logo=github&logoColor=white&style=for-the-badge"></a>
+    <a href="https://github.com/alexispages/Ultimate-ARTE-web-app/releases"><img alt="Latest Release Version" src="https://img.shields.io/github/v/release/alexispages/Ultimate-ARTE-web-app?color=yellow&logo=GitHub&style=for-the-badge"></a>
 </div>
 
 ## About
@@ -33,7 +33,7 @@ Our Docker image is available on [Docker Hub](https://hub.docker.com/r/plag3/uaw
 - Pull then run the container locally
 ```bash
 $ docker pull plag3/uawa
-$ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:latest
+$ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:v1.0.0
 ```
 - Access the webapp on http://localhost:5000/arte
 
@@ -49,7 +49,7 @@ $ cd Ultimate-ARTE-web-app/
 - Build then run the container locally
 ```bash
 $ docker build -t plag3/uawa:latest .
-$ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:latest
+$ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:v1.0.0
 ```
 - Access the webapp on http://localhost:5000/arte
 
