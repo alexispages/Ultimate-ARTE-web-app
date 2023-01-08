@@ -87,6 +87,7 @@ Thanks to ARTE's API, you will find on our webapp :
 ## Contributors
 
 <a href="https://www.linkedin.com/in/alexis-pag%C3%A8s"><img alt="Alexis PAGES LinkedIn" src="https://img.shields.io/badge/LinkedIn-Alexis%20PAGES-blue?logo=LinkedIn&style=for-the-badge"></a>
+
 <a href="https://www.linkedin.com/in/anatole-wilke-0819051a8/"><img alt="Anatole WILKE LinkedIn" src="https://img.shields.io/badge/LinkedIn-Anatole%20WILKE-blue?logo=LinkedIn&style=for-the-badge"></a>
 
 ## Acknowledgments
