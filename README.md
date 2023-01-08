@@ -48,7 +48,7 @@ $ cd Ultimate-ARTE-web-app/
 - Make sure you have [Docker installed on your system](https://docs.docker.com/get-docker/)
 - Build then run the container locally
 ```bash
-$ docker build -t plag3/uawa:latest .
+$ docker build -t plag3/uawa:v1.0.0 .
 $ docker run --rm --name uawa -d -p 5000:5000 plag3/uawa:v1.0.0
 ```
 - Access the webapp on http://localhost:5000/arte
