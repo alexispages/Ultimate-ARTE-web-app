@@ -17,11 +17,7 @@ class AppTestCase(unittest.TestCase):
         response = self.app.get('http://127.0.0.1:5000/arte/programme_du_jour')
         soup = BeautifulSoup(response.data, 'html.parser')
         table = soup.find('table')
-        self.assertIsNotNone(table)
-
-
-    
-   
+        self.assertIsNotNone(table)   
 
 if __name__ == '__main__':
     unittest.main()

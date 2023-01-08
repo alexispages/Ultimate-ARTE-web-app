@@ -1,9 +1,6 @@
 from flask import Flask, jsonify, render_template, redirect, request
-#
 import lesfonctions
 import re
-
-
 
 app = Flask(__name__)
 partage_data=""
@@ -24,8 +21,6 @@ def index():
     except Exception as error:
         print(error)
 
-
-
 @app.route('/arte/programme_du_jour')
 def get_arte_programme_du_jour():
     try:
@@ -38,11 +33,21 @@ def get_arte_programme_du_jour():
     except Exception as error:
         print(error)
 
-
 @app.route('/arte/categories')
 def get_arte_categories():
+    list_categorie_parse_result=[]
+    list_sans_doublons_categories=[]
     try:
-        return "OK"
+        url = 'https://api.arte.tv/api/player/v2/playlist/fr/LIVE?'
+        response=lesfonctions.collect(url)
+        parse_result=lesfonctions.parse_categorie(response)
+        global partage_data
+        partage_data=parse_result
+
+        for element in parse_result:
+            list_categorie_parse_result.append(element['categorie'])
+        list_sans_doublons_categories=list(set(list_categorie_parse_result))
+        return render_template("categories.html",data=list_sans_doublons_categories )
 
     except Exception as error:
         print(error)
