@@ -26,7 +26,7 @@ UAWA is a Python web app to retrieve the list of programs from the best channel 
 
 Our Docker image is available on [Docker Hub](https://hub.docker.com/r/plag3/uawa). We use **2 tags** to distribute this image:
 - **beta** : contains the latest features of the main branch
-- **v.X.X.X** : corresponds to a major release of our web app
+- **vX.X.X** : corresponds to a major release of our web app
 <br/>
 
 - Make sure you have [Docker installed on your system](https://docs.docker.com/get-docker/)
@@ -85,8 +85,9 @@ Thanks to ARTE's API, you will find on our webapp :
 <p align="right"><a href="#about">back to top ⬆️</a></p>
 
 ## Contributors
-- [Anatole WILKE](https://www.linkedin.com/in/anatole-wilke-0819051a8/) 
-- [Alexis PAGÈS](https://www.linkedin.com/in/alexis-pag%C3%A8s-3663551a9/)
+
+<a href="https://www.linkedin.com/in/alexis-pag%C3%A8s"><img alt="Alexis PAGES LinkedIn" src="https://img.shields.io/badge/LinkedIn-Alexis%20PAGES-blue?logo=LinkedIn&style=for-the-badge"></a>
+<a href="https://www.linkedin.com/in/anatole-wilke-0819051a8/"><img alt="Anatole WILKE LinkedIn" src="https://img.shields.io/badge/LinkedIn-Anatole%20WILKE-blue?logo=LinkedIn&style=for-the-badge"></a>
 
 ## Acknowledgments
 - [README Template](https://github.com/YousefIbrahimismail/Project-README-Template)
