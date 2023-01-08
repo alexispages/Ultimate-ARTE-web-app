@@ -36,3 +36,23 @@ def generate_table(data):
         table += "</tr>"
     table += "</table>"
     return table
+
+def parse_categorie(collect_result):
+    try:
+        program_url = []
+        parselist = []
+        for program in collect_result['data']['attributes']['items']:
+            program_url.append({'url':program['config']['url'], 'begin':program['beginRounded']})
+
+        for element in program_url:
+            json_content = requests.get(element['url']).json()
+            categorie=(jp.match("$..category[*]",json_content))[0]
+            titre=(jp.match("$..metadata[*].title[*]",json_content))[0]
+            heuredebut=element['begin']
+            description=(jp.match("$..description[*]",json_content))[0]
+            parsedict={"categorie":categorie,"titre":titre,"heuredebut":heuredebut,"description":description}
+            parselist.append(parsedict)
+
+    except Exception as error:
+        print(error)
+    return parselist
