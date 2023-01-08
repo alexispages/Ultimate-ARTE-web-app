@@ -52,5 +52,19 @@ def get_arte_categories():
     except Exception as error:
         print(error)
 
+@app.route('/arte/categories_result', methods=['GET', 'POST'])
+def result_arte_categories():
+    try:
+        list_element=[]
+        form_result = request.form.get('comp_select')
+        for element in partage_data:
+            if element['categorie'] == form_result:
+                list_element.append(element)
+        table=lesfonctions.generate_table(list_element)
+        return render_template("categories_result.html",table=table)
+
+    except Exception as error:
+        print(error)
+
 if __name__ == '__main__':
     app.run(debug=True)

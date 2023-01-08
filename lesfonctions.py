@@ -15,31 +15,11 @@ def parse_programme_du_jour(collect_result):
         parselist=[]
         for elements in items:
             titre=elements.get('title')
-            heure_debut=elements.get('beginRounded')
+            heuredebut=elements.get('beginRounded')
             description=elements.get('description')    
             image=re.split('\'url\': |}',str(elements.get('images')))[1]
-            parsedict={"titre":titre,"heuredebut":heure_debut,"description":description,"image":image}
+            parsedict={"titre":titre,"heuredebut":heuredebut,"description":description,"image":image}
             parselist.append(parsedict)
-    except Exception as error:
-        print(error)
-    return parselist
-
-def parse_categorie(collect_result):
-    try:
-        program_url = []
-        parselist = []
-        for program in collect_result['data']['attributes']['items']:
-            program_url.append(program['config']['url'])
-        for url in program_url:
-            json_content = requests.get(url).json()
-            categorie=(jp.match("$..category[*]",json_content))[0]
-            titre=(jp.match("$..metadata[*].title[*]",json_content))[0]
-            heure_debut=(jp.match("$..begin[*]",json_content))[0]
-            description=(jp.match("$..description[*]",json_content))[0]
-
-            parsedict={"categorie":categorie,"titre":titre,"heuredebut":heure_debut,"description":description}
-            parselist.append(parsedict)
-
     except Exception as error:
         print(error)
     return parselist
@@ -56,3 +36,23 @@ def generate_table(data):
         table += "</tr>"
     table += "</table>"
     return table
+
+def parse_categorie(collect_result):
+    try:
+        program_url = []
+        parselist = []
+        for program in collect_result['data']['attributes']['items']:
+            program_url.append({'url':program['config']['url'], 'begin':program['beginRounded']})
+
+        for element in program_url:
+            json_content = requests.get(element['url']).json()
+            categorie=(jp.match("$..category[*]",json_content))[0]
+            titre=(jp.match("$..metadata[*].title[*]",json_content))[0]
+            heuredebut=element['begin']
+            description=(jp.match("$..description[*]",json_content))[0]
+            parsedict={"categorie":categorie,"titre":titre,"heuredebut":heuredebut,"description":description}
+            parselist.append(parsedict)
+
+    except Exception as error:
+        print(error)
+    return parselist
